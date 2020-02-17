@@ -5,6 +5,8 @@
 using Random, Distributions
 Random.seed!(1)
 
+# Using normal distributions for all parameters, most of them truncated to (0,1)
+
 p_global_pandemic = truncated(Normal(0.5, 0.2),0,1)
 current_fatality_rate = truncated(Normal(0.02, 0.01),0,1)
 
@@ -36,3 +38,6 @@ young_person_death_probabilities = p_global .* fatality_rate_given_global .*
 
 println("Mean death probability of a healthy young person in the US: ", mean(young_person_death_probabilities))
 println("5th and 95th percentile: ", quantile(young_person_death_probabilities, [0.05, 0.95]))
+# Output:
+# Mean death probability of a healthy young person in the US: 0.0006320852149426237
+# 5th and 95th percentile: [1.4134410824516366e-5, 0.0022633825151091537]
