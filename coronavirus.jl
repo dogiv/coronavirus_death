@@ -2,6 +2,17 @@
 # for a healthy young person in the US in the next couple years.
 # With uncertainty propagation.
 
+# Update: this was pretty early in the pandemic (Feb 27) so I got some things wrong, 
+# but overall it's not bad.
+# Mistakes:
+# Guessing 50% for probability of a global pandemic was pretty optimistic even given the info
+# available to me at the time.
+# For the infection fatality rate I was a bit overconfident. I said 2% with SD 0.5%, but the
+# real value may well be under 1% once everything is counted.
+# For the ratio of infection fatality rates in young people and old people, I guessed 
+# 0.3 with a SD of 0.2; in fact the real value is likely much smaller (~0.2% for people in 
+# their 20s-30s vs maybe >5% for people over 65, for a ratio of about 0.04). 
+
 using Random, Distributions
 Random.seed!(1)
 
